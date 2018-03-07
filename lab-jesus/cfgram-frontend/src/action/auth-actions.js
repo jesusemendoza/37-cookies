@@ -17,7 +17,6 @@ export const signupRequest = user => dispatch => {
     try {
       localStorage.setItem('token', res.text)
     } catch(e) {
-      console.log(e)
       throw e
     }
   })

@@ -6,8 +6,6 @@ import {signupRequest, signinRequest} from '../../action/auth-actions'
 
 class Landing extends React.Component {
   render() {
-    console.log('__LANDING_PROPS__', this.props)
-    console.log("__THIS_PARENT__: ", this);
     let {params} = this.props.match
     let onComplete = params.auth === 'signin'
       ? this.props.signin

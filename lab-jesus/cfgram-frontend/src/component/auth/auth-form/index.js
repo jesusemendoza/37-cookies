@@ -29,11 +29,8 @@ export default class AuthForm extends React.Component {
   }
 
   handleSubmit(e) {
-    e.preventDefault()
-    // let props = this.props;
-    
+    e.preventDefault()    
     let {username, email, password} = this.state
-    console.log("__THIS__: ", this);
     this.props.onComplete({ username, email, password })
     .then(() => this.props.history.push('/content'))
     .then(() => this.setState({ username: '', email: '', password: '' }))
@@ -46,6 +43,7 @@ export default class AuthForm extends React.Component {
         className="auth-form"
         onSubmit={this.handleSubmit}
         noValidate>
+        
 
         <input
           type="text"
